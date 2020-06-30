@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:black;
+}
+section
+{
+    padding:50px;
+}
+.blk{
+    width: 400px;
+    height: 500px;
+    background-color:rgb(163, 128, 128);
+    margin: auto;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+#scroll{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 7.5px;
+    height: 100%;
+    background: rgba(255, 255, 255,0.05);
+}
+#progress
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 7.5px;
+    
+    background:linear-gradient(to top,rgb(17, 20, 185),rgb(0, 175, 0));
+    animation: animate 5s linear infinite;
+}
+@keyframes animate {
+    0%,100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+#progress::before
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top,rgb(17, 20, 185),rgb(0, 175, 0));
+  filter:blur(10px);       
+}
+#progress::after
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top,rgb(17, 20, 185),rgb(0, 175, 0));
+  filter:blur(50px);     
+}
+#box
+{   position:fixed;
+    margin:auto;
+    right:25px;
+    margin-top:50px;
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: black;
+    border-bottom: 10px solid;
+  border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+  border-image-slice: 1;
+  animation: animatey 2.5s linear infinite;
+}
+@keyframes animatey {
+    0%,100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+#text{
+    font-size:75px;
+    font-family: Impact, fantasy;
+    margin-left:25px;
+    margin-top:10px;
+    background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
